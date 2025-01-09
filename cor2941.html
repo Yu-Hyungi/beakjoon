@@ -23,27 +23,34 @@
 using namespace std;
 
 int main(void) {
-    int N, i, z;
     string Word;
-    cin >> N;
-    int Gword = N;
+    int i;
+    cin >> Word;
+    int alpha = (int)Word.length();
     
-    for(i=0;i<N;i++){
-        cin >> Word;
-        for(z=0;z<(int)Word.length();z++){
-            if((int)Word.find(Word[z], z+1)>z+1){
-                Gword--;
-                break;
+    for(i=0;i<(int)Word.length();i++){
+        if(Word[i]=='='){
+            if(Word[i-2]=='d'&&Word[i-1]=='z'){
+                alpha-=2;
+            }else alpha-=1;
+        }
+        else if(Word[i]=='-'){
+            alpha-=1;
+        }
+        else if(Word[i]=='l'||Word[i]=='n'){
+            if(Word[i+1]=='j'){
+                alpha-=1;
             }
         }
     }
     
-    cout << Gword;
+    cout << alpha;
+    
     
     return 0;
 }
                 </pre>
-                <h4><a href="25206.html">문제</a></h3>
+                <h4><a href="2941.html">문제</a></h3>
             </div>
             
             

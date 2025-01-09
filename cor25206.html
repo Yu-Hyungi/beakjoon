@@ -3,17 +3,64 @@
     <head>
         <meta charset="UTF-8">
         <title>(Yu)백준 답안지</title>
-    </head>
+        <link rel="stylesheet" href="cor.css"/>
+        <link rel="stylesheet" href="max850.css" media="screen and (max-width : 850px)"/>
+        </head>
 
     <body>
-        <h1>BaekJoon</h1>
-        <ul>
-            <li><a href="1316.html">그룹 단어 체커</a></li>
-            <li><a href="2941.html">그룹 단어 체커</a></li>
-            <li><a href="25206.html">그룹 단어 체커</a></li>
-        </ul>
+        <h1><a href="index.html">BaekJoon</a></h1>
+        <div id="grid">
+            <ul id="outline">
+                <li><a href="25206.html">#25206</a></li>
+                <li><a href="1316.html">#1316</a></li>
+                <li><a href="2941.html">#2941</a></li>
+            </ul>
+            <div id = main>
+                <h2>#25206 너의 평점은</h2>
+                <pre>
+#include <iostream>
+    #include <string>
+    using namespace std;
+    
+    int main(void) {
+        string Word;
+        float Grade = 0;
+        int Score = 0;
+        float GS=0;
+    
+    
+       
+        while(getline(cin, Word)){
+            if(Word[(int)Word.length()-1]!='P'){
+                if(Word[(int)Word.length()-1]=='+'){
+                    Score += Word[Word.find(" ")+1]-48;
+                    Grade = 69.5 - Word[(int)Word.length()-2];
+                }
+                else if(Word[(int)Word.length()-1]=='0'){
+                    Score += Word[Word.find(" ")+1]-48;
+                    Grade = 69 - Word[(int)Word.length()-2];
+                }
+                else if(Word[(int)Word.length()-1]=='F'){
+                    Score += Word[Word.find(" ")+1]-48;
+                    Grade = 0;
+                }
+                GS += Grade * (Word[Word.find(" ")+1]-48);
+            }
+            
+        }
+        
+        cout << GS/Score;
+    
+        return 0;
+    }
+                </pre>
+                <h4><a href="25206.html">문제</a></h3>
+            </div>
+            
+            
+        </div>
 
-        <h2>문제 선택</h2>
+        
 
     </body>
 </html>

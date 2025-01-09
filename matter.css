@@ -15,6 +15,7 @@ h1{
 }
 #outline li{
     height: 40px;
+    
 }
 #grid{
     display: grid;
@@ -40,6 +41,7 @@ h4{
     display:inline;
     background-color: royalblue;
     margin-left: 80%;
+
 }
 a{
     color: black;
