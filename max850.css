@@ -41,7 +41,7 @@ h4{
     padding: 7px;
 }
 a{
-    color: black;
+    color: inherit;
     text-decoration: none;
 }
 
